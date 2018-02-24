@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ClassLibrary2;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,17 @@ namespace cw_6_1
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+           ResultText.Text = Logic.GetBinarySystem(int.Parse(EnterText.Text));
+
+        }
+
+        private void ResultText_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
